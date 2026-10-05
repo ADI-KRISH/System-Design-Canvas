@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>System Design Canvas</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ctext y=%2726%27 font-size=%2726%27%3E%F0%9F%A7%A9%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>System Design Canvas</h1>
+    <nav id="levels" aria-label="Levels"></nav>
+  </header>
+
+  <main class="layout">
+    <aside class="left">
+      <div id="caseList" class="case-list"></div>
+      <section id="brief"></section>
+    </aside>
+
+    <section class="center">
+      <div class="toolbar">
+        <button id="checkBtn" class="primary">Check my design</button>
+        <button id="hintBtn">Hint</button>
+        <button id="resetBtn">Reset</button>
+        <span class="toolbar-note">Drag components onto the board · drag from the ● dot on a block to connect · click a line to remove it</span>
+      </div>
+      <div class="board-scroll">
+        <div id="board" class="board" aria-label="Whiteboard">
+          <svg id="edges" class="edges" width="960" height="560"></svg>
+        </div>
+      </div>
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+    <aside class="right">
+      <h2>Components</h2>
+      <div id="palette" class="palette"></div>
+      <h2>Ask the tutor</h2>
+      <div id="chat" class="chat" aria-live="polite"></div>
+      <form id="askForm" class="ask">
+        <textarea id="question" maxlength="500" rows="2" placeholder="Not sure why or how? Ask anything about this case…"></textarea>
+        <button class="primary" type="submit">Ask</button>
+      </form>
+    </aside>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

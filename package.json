@@ -1,0 +1,12 @@
+{
+  "name": "system-design-canvas",
+  "version": "0.1.0",
+  "description": "Drag-and-drop system design case studies with predefined, deterministic grading and an LLM tutor.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
